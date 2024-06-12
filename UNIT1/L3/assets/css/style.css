@@ -1,0 +1,94 @@
+:root {
+    --highlight-color: #FDFBF1;
+    --highlight-border-color: #FFD877;
+    --hr-color: #C4F3F2;
+    --shadow-color: #838383;
+    --base-font-color: #333333;
+    --grey-font-color: #999999;
+    --red-font-color: #B5460F;
+    --link-color: #107777;
+}
+
+
+* {
+    margin: 1em 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--base-font-color);
+}
+
+hr {
+    border: 1px solid var(--hr-color);
+}
+
+.ptb-10 {
+    padding: 10px 0px;
+}
+
+.text-centered{
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    margin: 20px auto;
+    width: 250px;
+}
+
+.y-highlight {
+    background-color: var(--highlight-color) ;
+    padding: 14px 0px;
+}
+
+.y-highlight p,
+.y-highlight b {
+    color: #004D4C;
+}
+
+.y-highlight h5,
+.y-highlight a{
+    margin:0 0 0 15px;
+}
+.y-highlight a{
+    color: var(--link-color);
+}
+
+.y-highlight h5{
+    color: var(--red-font-color);
+}
+
+.y-bold-border-top {
+    border-top: 2px solid var(--highlight-border-color);
+}
+
+.y-bold-border-left {
+    border-left: 2px solid var(--highlight-border-color);
+}
+
+.content-container{
+    margin: 0 auto;
+    width: 50%;
+}
+
+.content-container h1{
+    margin: 20px 0;
+}
+
+ul.article-list {
+    padding-left: 2em;
+}
+
+.focaccia-video{
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px var(--shadow-color);
+}
+
+.video-description{
+    color: var(--grey-font-color);
+}
+
+.recipe{
+    margin: 3em 0 0 0;
+}
