@@ -1,0 +1,167 @@
+* {
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('../img/sfondo.png');
+}
+
+.card {
+    padding: 30px 5px;
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    box-shadow: 1px 0px 8px 5px rgba(0, 0, 0, 0.57);
+}
+
+.card:not(:last-child){
+    margin-bottom: 20px;
+}
+
+
+header{
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,136,170,1) 0%, rgba(9,84,103,1) 100%, rgba(0,212,255,1) 100%);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header img {
+    display: block;
+    margin: 0 auto;
+    width: 75%;
+}
+
+
+nav ul {
+    list-style-type:none;
+    padding-inline: 0px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    margin: 0px 5px;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+    color: red;
+}
+
+nav ul li::before{
+    content: '\21D2';
+}
+
+nav ul li::after{
+    content: '\21D0';
+}
+
+main{
+    background-color: white;
+}
+
+.articles-container{
+    padding:5px;
+}
+
+.articles-container article{
+    padding:5px;
+}
+
+.articles-container article:not(:last-child){
+    border-bottom: 1px solid #666 ;
+}
+
+.articles-container article .article-title .subtitle{
+    color:#AAAAC3;
+}
+
+.article-content b{
+    color: #AA2072;
+}
+
+.article-content samp{
+    border: 1px solid #666;
+    background-color: #DDDDDd;
+    border-radius: 5px ;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 2px
+}
+
+table{
+    margin: 0 auto;
+    width: 90%;
+    border-bottom: 2px solid #3366CC;
+    text-align: center;
+}
+
+table caption{
+    font-style: italic;
+    font-weight: bold;
+}
+
+table thead th{
+    background-color: #3366CC;
+    color: white;
+    font-weight: 400;
+}
+
+table, th, td {
+    border-collapse: collapse;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #EEEEEE;
+}
+
+table tbody tr:not(:last-child){
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.yt-video{
+    width: 90%;
+    height: 15em;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.newsletter-container{
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    background-color: #DDDDDE;
+}
+
+.newsletter-container fieldset{
+    border:none;
+}
+.newsletter-container fieldset .newsletter-inputs {
+    display: block;
+    margin: 0 auto;
+}
+
+.newsletter-container fieldset .newsletter-inputs .subscribe-button{
+    background-color: #3366CC;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0px;
+    color: white;
+    font-size: bold;
+    padding: 2px;
+    width: 28%;
+}
+
+.newsletter-container fieldset .newsletter-inputs #userEmail{
+    border: none;
+    border-bottom: 1px dashed black;
+    width: 70%;
+}
+
+
+/* background: rgb(0,102,136);
+background: linear-gradient(344deg, rgba(0,102,136,1) 0%, rgba(0,212,255,1) 100%); */
