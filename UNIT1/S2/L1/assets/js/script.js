@@ -40,6 +40,34 @@ let n1 = 12, n2 = 20;
 let sum = n1 + n2;
 console.log('sum: ', sum);
 
+// Per fare il figo
+
+function sumFunction(...args){
+    let res = 0;
+    for(let num of args){
+
+        if(typeof(args) === 'number'){
+            res+= num
+            continue;
+        }
+
+        // array management
+        if(Array.isArray(num)){
+            for(let n of num){
+                res += n;
+            }
+        }
+        // other types managment
+        else
+            return null;
+    }
+
+    return res;
+}
+
+let res = sumFunction({n1:1,n2:2}) 
+console.log('sumFunction: ', res != null ? res : 'Tipo non valido')
+
 /* ESERCIZIO 4
  Crea una variable di nome "x" e assegna ad essa il numero 12.
 */
@@ -68,6 +96,47 @@ console.log('myFirstName: ', myFirstName);
 
 let sub = 4 - x;
 console.log('sub: ', sub);
+
+// Per fare il figo
+
+function MySort(array){
+    if(Array.isArray(array)){
+        let i = 0;
+        let swap;
+        do{
+            swap = false
+            let nextIndex = i+1;
+            if(array[i] < array[nextIndex] && array[i] != undefined && array[nextIndex] != undefined){
+                let cache = array[i];
+                array[i] = array[nextIndex];
+                array[nextIndex] = cache;
+                swap = true
+            }
+
+            if(swap)
+                i=0;
+            else
+                i++;
+        } while(swap || i <= array.length)
+    }
+    return array;
+}
+
+function SubFunction(...args){
+    let res = null;
+    let argsValues = args[0];
+    if(Array.isArray(argsValues)){
+        MySort(argsValues);
+
+        for(num of argsValues)
+            res === null ? res = num : res -= num;
+
+    }
+    return res;
+
+}
+
+console.log('SubFunction', SubFunction([4,12]))
 
 /* ESERCIZIO 7
  Crea due variabili: "name1" e "name2". Assegna a name1 la stringa "john", e assegna a name2 la stringa "John" (con la J maiuscola!).
