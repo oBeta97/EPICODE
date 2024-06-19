@@ -6,7 +6,7 @@
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let n1 = 4, n2 = 4;
+let n1 = 2, n2 = 4;
 
 if(typeof(n1) != 'number')
     throw('n1 non è un numero, malissimo!');
@@ -46,7 +46,7 @@ else
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-    // if(n1 === 8 || n2 === 8 || n1 + n2 === 8 || n1 + n2 === 8)
+    // if(n1 === 8 || n2 === 8 || n1 - n2 === 8 || n2 - n1 === 8 || n1 + n2 === 8)
     if(n1 === 8)
         console.log('n1 è 8');
     else if(n2 === 8)
@@ -55,8 +55,22 @@ else
         console.log('la somma tra n1 e n2 fa 8');
     else if(n1 - n2 === 8)
         console.log('la sottrazione tra n1 e n2 fa 8');
+    else if(n2 - n1 === 8)
+        console.log('la sottrazione tra n2 e n1 fa 8');
     else 
         console.log('n1 ed n2 non sono 8 e la loro somma o sottrazione non fa 8');
+
+    // Test mio
+    // switch (true) {
+    //     case n1 === 8:
+    //     case n2 === 8:
+    //     case n1 + n2 === 8:
+    //     case Math.abs(n1 - n2) === 8:
+    //       console.log('true');
+    //       break;
+    //     default:
+    //       console.log('false');
+    // }
 
 
 /* ESERCIZIO 5
@@ -74,12 +88,13 @@ else
     let shippingCost = 10;
     let salePerc = 20;
 
-    let totAfterSale = totalShoppingCart * (salePerc /100);
+    // let totAfterSale = totalShoppingCart * (salePerc /100);
+    totalShoppingCart -= totalShoppingCart * (salePerc /100);
 
-    if(totAfterSale > 50)
-        console.log('il costo spedizione è: ' + totAfterSale);
-    else if(totAfterSale < 50 && totAfterSale > 0)
-        console.log('il costo della spedizione è ' + totAfterSale + shippingCost + ' (10 di spedizione)');
+    if(totalShoppingCart > 50)
+        console.log('il costo merce è: ' + totalShoppingCart);
+    else if(totalShoppingCart < 50 && totalShoppingCart > 0)
+        console.log('il costo della merce è ' + (totalShoppingCart + shippingCost) + ' (10 di spedizione)');
     else 
         console.log('ti dobbiamo dei soldi! Accipicchia');
 
@@ -127,24 +142,41 @@ else
         // else if(x3 < x1 && x3 < x2 || x3 < x1 && x3 < x2)
         //     resString +='Il terzo valore più grande è x3: ' + x3;
 
-        if(x1 > x2 && x2 > x3)
-            resString +='x1, x2, x3';
-        else if(x1 > x3 && x3 > x2)
-            resString +='x1, x3, x2';
-        else if(x2 > x1 && x1 > x3)
-            resString +='x2, x1, x3';
-        else if(x2 > x3 && x3 > x1)
-            resString +='x2, x3, x1';
-        else if(x3 > x1 && x1 > x2)
-            resString +='x3, x1, x2';
-        else if (x3 > x2 && x2 > x1)
-            resString +='x3, x2, x1';
+        // if(x1 > x2 && x2 > x3)
+        //     resString +='x1, x2, x3';
+        // else if(x1 > x3 && x3 > x2)
+        //     resString +='x1, x3, x2';
+        // else if(x2 > x1 && x1 > x3)
+        //     resString +='x2, x1, x3';
+        // else if(x2 > x3 && x3 > x1)
+        //     resString +='x2, x3, x1';
+        // else if(x3 > x1 && x1 > x2)
+        //     resString +='x3, x1, x2';
+        // else if (x3 > x2 && x2 > x1)
+        //     resString +='x3, x2, x1';
+        // else
+        //     resString +='Bravo! Combinazione inesistente'
+
+        if((x1 > x2 && x1 > x3)){
+            if(x2 > x3)
+                resString +='x1, x2, x3';
+            else
+                resString +='x1, x3, x2';
+        }
+        else if (x2> x1 && x2 > x3){
+            if(x1 > x3)
+                resString +='x2, x1, x3';
+            else
+                resString +='x2, x3, x1';
+        }
         else
-            resString +='Bravo! Combinazione inesistente'
-
-
+            if(x1 > x2)
+                resString +='x3, x1, x2';
+            else
+                resString +='x3, x2, x1';
+            
     } else
-        resString += 'n1, n2 e n3 sono uguali';
+        resString += 'x1, x2 e x3 sono uguali';
 
     console.log(resString);
 
