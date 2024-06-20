@@ -106,7 +106,7 @@ const starWarsCharacters = [
   */
     console.log('************************')
 
-    const charactersNames =[];
+    let charactersNames =[];
 
     console.log('Esercizio 1: ', charactersNames)
   
@@ -245,12 +245,16 @@ const starWarsCharacters = [
     console.log('Esercizio 9 pre: ', charactersNames)
     console.log('Esercizio 9 pre: ', charactersNames.length)
 
+    let arr = [];
     for(let i = 0 ; i < femaleCharacters.length; i++){
         let targetName = femaleCharacters[i].name;
         for( let j = 0; j < charactersNames.length ; j++)
-            if(charactersNames[j] === targetName)
-                charactersNames.splice(j,1);
+            if(charactersNames[j] !== targetName)
+                // charactersNames.splice(j,1);
+                arr.push(charactersNames[j])
     }
+
+    charactersNames = arr;
     console.log('************************')
 
     console.log('Esercizio 9 post: ', charactersNames)
