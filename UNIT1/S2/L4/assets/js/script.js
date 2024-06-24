@@ -19,7 +19,7 @@ console.log(`area(${base},${altezza}): `, area(base,altezza));
 
 function crazySum(n1,n2){
     if(typeof(n1) !== 'number' || typeof(n2) !== 'number')
-        return null;
+return null; 
 
     return n1 === n2 ? (n1 + n2) * 3 : n1 + n2;
 }
