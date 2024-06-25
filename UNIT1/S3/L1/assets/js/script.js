@@ -279,7 +279,7 @@ const movies = [
 function OldestMovie(arrObjs){
   let res;
 
-  arrObjs.forEach((item, index) => {
+  arrObjs.forEach((item) => {
     if(res === undefined || res.Year > item.Year)
       res = item;
   });
@@ -356,6 +356,9 @@ const FindMovieIndexByYear = (arrObjs, year) => arrObjs.findIndex(item => item.Y
 MovieFound = FindMovieIndexByYear(movies, 2012);
 
 console.log(`esercizio 15 FindMovieIndexByYear()`, MovieFound);
+
+
+// ------------------------------------------------- //
 
 function FindMovieIndexByNearestYear(arrObjs, year){
   let res;
