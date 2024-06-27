@@ -17,7 +17,7 @@ function init(){
     drawnNumber.setAttribute('disabled', 'true');
     userboardsSection.innerHTML = '';
     pickBoardsForm.reset();
-    numbersDrawned.splice(0, numbersDrawned.length)
+    numbersDrawned.splice(0)
 }
 
 function CreateTombolaBoard(targetDiv){
