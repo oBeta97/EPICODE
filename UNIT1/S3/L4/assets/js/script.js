@@ -5,14 +5,18 @@ const pickBoardsForm = document.getElementById('pickBoardsForm');
 const drawnNumber = document.getElementById('drawnNumber');
 
 const numbersDrawned = [];
+const numbersToDrawn = [];
 
-window.addEventListener("load", function(e){
+window.addEventListener("load", function (e) {
     init();
 });
 
 const RandomNumberGenerator = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-function init(){
+function init() {
+    for (let i = 1; i <= 90; i++)
+        numbersToDrawn.push(i)
+
     CreateTombolaBoard(tombolaBoard);
     drawnNumber.setAttribute('disabled', 'true');
     userboardsSection.innerHTML = '';
@@ -20,11 +24,11 @@ function init(){
     numbersDrawned.splice(0)
 }
 
-function CreateTombolaBoard(targetDiv){
+function CreateTombolaBoard(targetDiv) {
     targetDiv.innerHTML = '';
 
     const tab = document.createElement('table');
-    
+
     const caption = document.createElement('caption');
     const captionTitle = document.createElement('h1');
     captionTitle.innerText = 'TRENBOLONE';
@@ -34,9 +38,9 @@ function CreateTombolaBoard(targetDiv){
     const tbody = document.createElement('tbody');
 
     let n = 0;
-    for(let i = 1; i <= 10; i++){
+    for (let i = 1; i <= 10; i++) {
         const tr = document.createElement('tr');
-        for(let j = 1; j <= 9; j++){
+        for (let j = 1; j <= 9; j++) {
             const td = document.createElement('td');
             let val = ++n
             td.id = `td${val}`;
@@ -55,29 +59,29 @@ function CreateTombolaBoard(targetDiv){
     targetDiv.appendChild(tab);
 }
 
-function CreateUserBoards(targetDiv, nBoards){
+function CreateUserBoards(targetDiv, nBoards) {
     targetDiv.innerHTML = '';
 
-    for(let n = 0; n < nBoards; n++){
+    for (let n = 0; n < nBoards; n++) {
 
         const tab = document.createElement('table');
         tab.classList.add('user-board')
-        
+
         const caption = document.createElement('caption');
 
         const thead = document.createElement('thead');
         const tbody = document.createElement('tbody');
-       
-        
+
+
         const numbers = []
-        for(let i = 1; i <= 3; i++){
+        for (let i = 1; i <= 3; i++) {
             const tr = document.createElement('tr');
-            for(let j = 1; j <= 5; j++){
+            for (let j = 1; j <= 5; j++) {
                 const td = document.createElement('td');
-                
-                let n = RandomNumberGenerator(1,90);
-                
-                if(!numbers.includes(n)){
+
+                let n = RandomNumberGenerator(1, 90);
+
+                if (!numbers.includes(n)) {
                     td.id = `userTd${n}`;
                     numbers.push(n);
                     td.innerText = n;
@@ -99,7 +103,7 @@ function CreateUserBoards(targetDiv, nBoards){
 
 }
 
-pickBoardsForm.addEventListener('submit', function(e){
+pickBoardsForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
     drawnNumber.removeAttribute('disabled');
@@ -112,30 +116,33 @@ pickBoardsForm.addEventListener('submit', function(e){
 
 });
 
-drawnNumber.addEventListener('click', function (){
-    
-    if(numbersDrawned.length === 90){
-        if(confirm('Want to replay?')){
+drawnNumber.addEventListener('click', function DrawnNumer() {
+
+    if (numbersDrawned.length === 90) {
+        if (confirm('Want to replay?')) {
             init();
             return;
         }
     }
-        
+
+    let randomIndex = RandomNumberGenerator(0, numbersToDrawn.length - 1);
+    let numberDrawned = numbersToDrawn[randomIndex];
+
+    const targetTd = document.getElementById(`td${numberDrawned}`);
+    targetTd.classList.add('drawned');
+
+    const userTd = document.getElementById(`userTd${numberDrawned}`);
+    if (userTd !== null)
+        userTd.classList.add('drawned');
+
+    numbersDrawned.push(numberDrawned);
+    numbersToDrawn.splice(randomIndex, 1);
+
     
-    let tempWhile = true; 
-    while(tempWhile){
-        let numberDrawned = RandomNumberGenerator(1, 90);
-        if(!numbersDrawned.includes(numberDrawned)){
-            const targetTd = document.getElementById(`td${numberDrawned}`);
-            targetTd.classList.add('drawned');
-            
-            const userTd = document.getElementById(`userTd${numberDrawned}`);
-            if(userTd !== null)
-                userTd.classList.add('drawned');
+    console.log('randomIndex', randomIndex);
+    console.log('numberDrawned', numbersDrawned);
+    console.log('numbersToDrawn',numbersToDrawn);
 
-            numbersDrawned.push(numberDrawned);
+    tempWhile = false;
 
-            tempWhile = false;
-        }
-    }
 });
