@@ -1,0 +1,24 @@
+@media print{
+
+    body>*{
+        display: none;
+    }
+
+    main{
+        display: block;
+    }
+
+    main aside{
+        display: none;
+    }
+
+    main article{
+        display: block;
+    }
+
+    main article iframe,
+    main article section{
+        display: none;
+    }
+
+}
