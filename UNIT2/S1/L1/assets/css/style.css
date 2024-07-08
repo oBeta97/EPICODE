@@ -253,7 +253,7 @@ nav ul li {
 
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
     * {
         font-size: 1.2em;
     }
@@ -271,9 +271,11 @@ nav ul li {
     header>* {
         display: inline-block;
         position: relative;
+        vertical-align: middle;
     }
 
     header div>* {
+        vertical-align: middle;
         display: inline-block;
     }
 
@@ -283,16 +285,12 @@ nav ul li {
 
     header div p {
         margin-bottom: 0;
-        position: absolute;
-        width: max-content;
-        top: 25%;
+
         font-size: 1.5em;
     }
 
     nav{
-        position: absolute;
-        top: 30%;
-        right: 4em;
+        margin-left: 35em;
         font-size: 1.5em;
     }
 
