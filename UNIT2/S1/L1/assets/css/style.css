@@ -285,12 +285,13 @@ nav ul li {
 
     header div p {
         margin-bottom: 0;
-
         font-size: 1.5em;
     }
 
     nav{
-        margin-left: 35em;
+        position: absolute;
+        top: 30%; 
+        right: 4em;
         font-size: 1.5em;
     }
 
