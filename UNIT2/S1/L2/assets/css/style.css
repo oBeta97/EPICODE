@@ -426,6 +426,7 @@ footer a {
 .underlined-text {
   position: relative;
   z-index: 3;
+  white-space: nowrap;
 }
 
 .underlined-text img {
