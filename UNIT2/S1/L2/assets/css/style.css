@@ -484,21 +484,19 @@ header {
   border-radius: 15px;
   position: fixed;
   z-index: 100;
+  right: -15px;
 }
 
 .calendar-icon-container {
-  bottom: 75px;
-  right: -15px;
+  bottom: 4em;
 }
 
 .plus-icon-container {
-  bottom: 125px;
-  right: -15px;
+  bottom: 7em;
 }
 
 .up-row-container {
   bottom: 20px;
-  right: -15px;
 }
 
 
@@ -506,20 +504,17 @@ header {
 
 @media (min-width: 768px) {
   .plus-icon-container {
-    top: 20px;
-    right: -15px;
+    top: 1em;
     bottom: auto;
   }
   
   .calendar-icon-container {
-    top: 75px;
-    right: -15px;
+    top: 5em;
     bottom: auto;
   }
   
   .up-row-container {
     bottom: 20px;
-    right: -15px;
   }
 }
 
