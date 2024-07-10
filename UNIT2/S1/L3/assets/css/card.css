@@ -9,9 +9,9 @@
     flex-direction: column;
     color: #561700;
     background-color: #FBF7E3;
-    width: 20em;
-    height: 25em;
+    width: 100%;
     border-radius: 25%;
+    gap: 1em;
 }
 
 .card-content{
@@ -27,6 +27,7 @@
 .card img{
     border-top-left-radius: 25%;
     border-top-right-radius: 25%;
+    width: 100%;
 }
 
 .card-content{
@@ -48,6 +49,7 @@
     background-color: #F3DF85 ;
     border-radius: 20px;
     cursor: pointer;
-    padding: 1em 5em;
+    padding: 1em 0;
     font-weight: 600;
+    width: 80%;
 }
