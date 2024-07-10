@@ -24,7 +24,7 @@
     padding: 1em 0;
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 1200px){
     .article-container{
         flex-direction: row-reverse;
         width: fit-content;
