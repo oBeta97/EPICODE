@@ -8,3 +8,24 @@
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.1em;
+}
+
+.parole,
+p{
+    display: inline-block;
+}
+
+.parole::after{
+    content: "";
+    display: inline-block;
+    animation: words-carousel 5s linear 0s infinite;
+    transition: transform 1s linear, opacity 1s linear;
+    opacity: 0;
+    font-style: italic;
+}
