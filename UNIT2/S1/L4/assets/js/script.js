@@ -1,10 +1,10 @@
 window.addEventListener('load', function () {
 
-    const postits = this.document.getElementsByClassName('postit');
+    const postits = document.getElementsByClassName('postit');
 
     let i = 0;
 
-    const myInterval = this.setInterval(function (){
+    const myInterval = setInterval(function (){
             if(i < postits.length ){
                 const targetClassList = postits[i].classList;
                 console.log(targetClassList.classList);
