@@ -1,0 +1,48 @@
+
+@keyframes pin-postit-rotate-right {
+    0%{
+        opacity: 0.3;
+        transform: scale(10) rotate(0deg);
+    }
+
+    10%{
+        opacity: 0.5;
+    }
+
+    25%{
+        opacity: 1;
+    }
+
+    90%{
+        transform: rotate(4deg);
+    }
+
+    100%{
+        transform: scale(1) rotate(8deg);
+        opacity: 1;
+    }
+}
+
+@keyframes pin-postit-rotate-left {
+    0%{
+        opacity: 0.3;
+        transform: scale(10) rotate(0deg);
+    }
+
+    10%{
+        opacity: 0.5;
+    }
+
+    25%{
+        opacity: 1;
+    }
+
+    90%{
+        transform: rotate(-4deg);
+    }
+
+    100%{
+        transform: scale(1) rotate(-8deg);
+        opacity: 1;
+    }
+}

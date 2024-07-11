@@ -17,7 +17,7 @@ body{
     /* border: 1px solid black; */
     width: 90%;
     margin: 0 auto;
-    gap: 2em;
+    gap: 3em;
     justify-content: space-evenly;
     padding: 4em 0;
 }
@@ -31,6 +31,7 @@ body{
     /* border: 1px solid red; */
     background: linear-gradient(0deg, rgba(114, 114, 114, 0.582) 0%, rgba(255, 255, 255, 0) 30%);
     box-shadow: 5px 5px 20px -5px #000000;
+    opacity: 0;
 }
 
 .postit h4{
@@ -56,4 +57,19 @@ body{
 
 .postit.rotate-right{
     transform: rotate(8deg);
+}
+
+.postit:hover{
+    transform: rotate(0deg) scale(1.2);
+    transition: transform 0.1s linear;
+}
+
+.pin-rotate-right{
+    animation: pin-postit-rotate-right 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.pin-rotate-left{
+    animation: pin-postit-rotate-left 0.5s;
+    animation-fill-mode: forwards;
 }
