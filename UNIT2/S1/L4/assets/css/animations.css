@@ -124,3 +124,34 @@
         color: yellowgreen;
     }
 }
+
+@keyframes words-carousel-pt2 {
+    0%{
+        opacity: 0;
+        transform: translateY(-2em);
+        content: "interfacce web";
+        color:cadetblue;
+    }
+    
+    10%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    25%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    32%{
+        opacity: 0;
+        transform: translateY(2em);
+        content: "interfacce web";
+        color: cadetblue;
+    }
+
+    100%{
+        opacity: 0;
+        transform: translateY(-2em);
+    }
+}

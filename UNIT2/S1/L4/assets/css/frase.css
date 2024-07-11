@@ -16,16 +16,49 @@
     font-size: 1.1em;
 }
 
-.parole,
 p{
     display: inline-block;
 }
 
-.parole::after{
+#testoAlternato .parole::after{
     content: "";
     display: inline-block;
     animation: words-carousel 5s linear 0s infinite;
     transition: transform 1s linear, opacity 1s linear;
     opacity: 0;
     font-style: italic;
+}
+
+hr{
+    margin: 2em auto;
+}
+
+
+#testoAlternatopt2 .parole{
+    position: relative;
+}
+
+#testoAlternatopt2 .parole i{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: max-content;
+}
+
+#testoAlternatopt2 .parole i:nth-child(1){
+    opacity: 1;
+    animation: words-carousel-pt2 5s linear 0s infinite;
+    color: cadetblue;
+}
+
+#testoAlternatopt2 .parole i:nth-child(2){
+    opacity: 0;
+    animation: words-carousel-pt2 5s linear 1.7s infinite;
+    color:deeppink;
+}
+
+#testoAlternatopt2 .parole i:nth-child(3){
+    opacity: 0;
+    animation: words-carousel-pt2 5s linear 3.4s infinite;
+    color: yellowgreen;
 }
