@@ -130,7 +130,6 @@
         opacity: 0;
         transform: translateY(-2em);
         content: "interfacce web";
-        color:cadetblue;
     }
     
     10%{
@@ -147,7 +146,6 @@
         opacity: 0;
         transform: translateY(2em);
         content: "interfacce web";
-        color: cadetblue;
     }
 
     100%{
