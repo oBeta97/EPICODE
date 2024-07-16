@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-
+    <link rel="stylesheet" href="./assets/css/style.css">
 
     <!-- Abbiamo bisogno di un sito web per un'agenzia di viaggi!
 
@@ -105,14 +105,353 @@
 
 </head>
 
-<body>
+<body class="vh-100 d-flex flex-column">
 
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img class="" src="./assets/img/logo.png" width="70px" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#saldi">Saldi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#welcomeSummer">Welcome Summer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Last Minute</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Recensioni</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Cerca posti da sogno"
+                            aria-label="Search">
+                        <button class="btn btn-outline-danger" type="submit">Cerca</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
 
+    <main class="flex-grow-1 container py-5">
 
+        <!-- Hero -->
+        <div class="row mb-5">
+            <div class="col">
+                <div class="card text-center text-secondary bg-light border-0 shadow-sm">
+                    <div class="card-body">
+                        <h1 class="card-title border-bottom p-3 mb-3">Pausa Viaggi.it</h5>
+                            <p class="card-text mb-5">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p>
+                            <a href="#" class="card-link btn btn-info text-light fw-bold px-4 mb-5">Prenota ora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Saldi -->
+        <div class="container-fluid p-0 mb-5">
+
+            <div class="row">
+                <div class="col">
+                    <h4 id="Saldi">Saldi</h4>
+                </div>
+                <div class="col text-end">
+                    <a href="#" class="text-info">Nascondi sezione</a>
+                </div>
+            </div>
+            <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2">
+                <div class="col">
+                    <div class="card border-2 border-info">
+                        <img src="./assets/img/best-place-ever.jpg" class="card-img-top" alt="best place ever">
+                        <div class="card-body">
+                            <h4 class="card-title">Best Place Ever</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ea
+                                    in eligendi earum, laboriosam vitae ab quis culpa quasi eos aut quae impedit
+                                    explicabo similique. Corrupti provident cupiditate doloribus libero.</p>
+                                <a href="#" class="btn btn-info text-light fw-bold">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card border-2 border-info">
+                        <img src="./assets/img/best-place-ever.jpg" class="card-img-top" alt="best place ever">
+                        <div class="card-body">
+                            <h4 class="card-title">Best Place Ever</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ea
+                                    in eligendi earum, laboriosam vitae ab quis culpa quasi eos aut quae impedit
+                                    explicabo similique. Corrupti provident cupiditate doloribus libero.</p>
+                                <a href="#" class="btn btn-info text-light fw-bold">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card border-2 border-info">
+                        <img src="./assets/img/best-place-ever.jpg" class="card-img-top" alt="best place ever">
+                        <div class="card-body">
+                            <h4 class="card-title">Best Place Ever</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ea
+                                    in eligendi earum, laboriosam vitae ab quis culpa quasi eos aut quae impedit
+                                    explicabo similique. Corrupti provident cupiditate doloribus libero.</p>
+                                <a href="#" class="btn btn-info text-light fw-bold">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col d-md-none d-lg-block">
+                    <div class="card border-2 border-info">
+                        <img src="./assets/img/best-place-ever.jpg" class="card-img-top" alt="best place ever">
+                        <div class="card-body">
+                            <h4 class="card-title">Best Place Ever</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ea
+                                    in eligendi earum, laboriosam vitae ab quis culpa quasi eos aut quae impedit
+                                    explicabo similique. Corrupti provident cupiditate doloribus libero.</p>
+                                <a href="#" class="btn btn-info text-light fw-bold">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Welcome Summer -->
+        <div class="container-fluid p-0 mb-5">
+            <div class="row">
+                <div class="col">
+                    <h4 id="welcomeSummer">Welcome Summer</h4>
+                </div>
+                <div class="col text-end">
+                    <a href="#" class="text-info">Nascondi sezione</a>
+                </div>
+            </div>
+            <div class="row row-cols-sm-2 row-cols-lg-3 g-2">
+
+                <div class="col">
+                    <div class="card shadow-lg">
+                        <img src="./assets/img/best-place-ever.jpg" class="card-img-top" alt="best place ever">
+                        <div class="card-body">
+                            <h4 class="card-title">Best Place Ever</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ea
+                                    in eligendi earum, laboriosam vitae ab quis culpa quasi eos aut quae impedit
+                                    explicabo similique. Corrupti provident cupiditate doloribus libero.</p>
+                                <a href="#" class="btn btn-info text-light fw-bold">Prenota</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-lg">
+                        <img src="./assets/img/best-place-ever.jpg" class="card-img-top" alt="best place ever">
+                        <div class="card-body">
+                            <h4 class="card-title">Best Place Ever</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ea
+                                    in eligendi earum, laboriosam vitae ab quis culpa quasi eos aut quae impedit
+                                    explicabo similique. Corrupti provident cupiditate doloribus libero.</p>
+                                <a href="#" class="btn btn-info text-light fw-bold">Prenota</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-lg">
+                        <img src="./assets/img/best-place-ever.jpg" class="card-img-top" alt="best place ever">
+                        <div class="card-body">
+                            <h4 class="card-title">Best Place Ever</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ea
+                                    in eligendi earum, laboriosam vitae ab quis culpa quasi eos aut quae impedit
+                                    explicabo similique. Corrupti provident cupiditate doloribus libero.</p>
+                                <a href="#" class="btn btn-info text-light fw-bold">Prenota</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-lg">
+                        <img src="./assets/img/best-place-ever.jpg" class="card-img-top" alt="best place ever">
+                        <div class="card-body">
+                            <h4 class="card-title">Best Place Ever</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ea
+                                    in eligendi earum, laboriosam vitae ab quis culpa quasi eos aut quae impedit
+                                    explicabo similique. Corrupti provident cupiditate doloribus libero.</p>
+                                <a href="#" class="btn btn-info text-light fw-bold">Prenota</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-lg">
+                        <img src="./assets/img/best-place-ever.jpg" class="card-img-top" alt="best place ever">
+                        <div class="card-body">
+                            <h4 class="card-title">Best Place Ever</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ea
+                                    in eligendi earum, laboriosam vitae ab quis culpa quasi eos aut quae impedit
+                                    explicabo similique. Corrupti provident cupiditate doloribus libero.</p>
+                                <a href="#" class="btn btn-info text-light fw-bold">Prenota</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-lg">
+                        <img src="./assets/img/best-place-ever.jpg" class="card-img-top" alt="best place ever">
+                        <div class="card-body">
+                            <h4 class="card-title">Best Place Ever</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ea
+                                    in eligendi earum, laboriosam vitae ab quis culpa quasi eos aut quae impedit
+                                    explicabo similique. Corrupti provident cupiditate doloribus libero.</p>
+                                <a href="#" class="btn btn-info text-light fw-bold">Prenota</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Offerta del giorno -->
+        <div class="container-fluid p-0 mb-5">
+            <div class="row">
+                <div class="col">
+                    <h4 id="welcomeSummer">Offerta del giorno</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-4 col-lg-8">
+                                <img src="./assets/img/best-place-ever.jpg" class="img-fluid rounded-start"
+                                    alt="best place ever">
+                            </div>
+                            <div class="col-8 col-lg-4">
+                                <div class="card-body">
+                                    <h2 class="card-title">Best place ever</h5>
+                                        <p class="card-text"><small class="text-muted">15-01-2021 > ∞</small></p>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Harum, voluptatum qui. Perferendis ratione dolores obcaecati suscipit
+                                            adipisci necessitatibus similique aperiam, tenetur iusto ad dicta a hic
+                                            minus eligendi provident quaerat.</p>
+                                        <span class="badge rounded-pill bg-dark"> Best offer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Last Minute -->
+        <div class="container-fluid p-0 mb-5">
+            <div class="row">
+                <div class="col">
+                    <h4 id="welcomeSummer">Last Minute</h4>
+                </div>
+            </div>
+            <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-2">
+                <div class="col">
+                    <img src="./assets/img/best-place-ever.jpg" alt="best place ever" class="rounded img-fluid">
+                </div>
+                <div class="col">
+                    <img src="./assets/img/best-place-ever.jpg" alt="best place ever" class="rounded img-fluid">
+                </div>
+                <div class="col">
+                    <img src="./assets/img/best-place-ever.jpg" alt="best place ever" class="rounded img-fluid">
+                </div>
+                <div class="col">
+                    <img src="./assets/img/best-place-ever.jpg" alt="best place ever" class="rounded img-fluid">
+                </div>
+                <div class="col">
+                    <img src="./assets/img/best-place-ever.jpg" alt="best place ever" class="rounded img-fluid">
+                </div>
+                <div class="col">
+                    <img src="./assets/img/best-place-ever.jpg" alt="best place ever" class="rounded img-fluid">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Dicono di noi -->
+        <div class="container-fluid p-0 mb-5">
+            <div class="row">
+                <div class="col text-center">
+                    <h4 id="welcomeSummer">Dicono di noi</h4>
+                </div>
+            </div>
+            <div class="row-cols-1">
+                <div class="col">
+                    <div class="card mb-3 border-0">
+                        <div class="row g-0">
+                            <div class="col-1">
+                                <img src="./assets/img/avatar.png" class="img-fluid rounded-circle border border-3 border-info" alt="Wolverine">
+                            </div>
+                            <div class="col-11">
+                                <div class="card-body py-0">
+                                    <h5 class="card-title">Wolverine</h5>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi alias odit earum, quae, numquam dolor pariatur rem illum, fugit ex nam magnam et. Ex dignissimos dolores quos nisi officiis voluptas!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card mb-3 border-0">
+                        <div class="row g-0">
+                            <div class="col-1">
+                                <img src="./assets/img/avatar.png" class="img-fluid rounded-circle border border-3 border-info" alt="Wolverine">
+                            </div>
+                            <div class="col-11">
+                                <div class="card-body py-0">
+                                    <h5 class="card-title">Wolverine</h5>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi alias odit earum, quae, numquam dolor pariatur rem illum, fugit ex nam magnam et. Ex dignissimos dolores quos nisi officiis voluptas!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card mb-3 border-0">
+                        <div class="row g-0">
+                            <div class="col-1">
+                                <img src="./assets/img/avatar.png" class="img-fluid rounded-circle border border-3 border-info" alt="Wolverine">
+                            </div>
+                            <div class="col-11">
+                                <div class="card-body py-0">
+                                    <h5 class="card-title">Wolverine</h5>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi alias odit earum, quae, numquam dolor pariatur rem illum, fugit ex nam magnam et. Ex dignissimos dolores quos nisi officiis voluptas!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-dark d-flex flex-column align-items-center py-4 gap-3">
+        <button class="btn btn-dark border border-secondary text-secondary" type="button"
+            id="contactUs">Contattaci</button>
+        <p class="text-light">&copy; <span id="actualYear"></span> Kalina Travel LTD. All Rights Reserved.</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
 
 </body>
 
