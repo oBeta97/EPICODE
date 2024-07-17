@@ -11,6 +11,7 @@ $my-displays: 'inline', 'block';
 
 @each $display in $my-displays{
     @each $type, $size in $my-sizes{
+        
         .padding-#{$display}-#{$type}{
             display: $display;
             @if $display == 'inline'{
