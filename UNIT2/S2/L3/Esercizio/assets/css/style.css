@@ -1,1 +1,246 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  line-height: 1.1rem;
+}
+
+* {
+  font-family: Tahoma, "Segoe UI", Geneva, Verdana, sans-serif;
+  color: #f4f4f4;
+  font-size: 1.2rem;
+  line-height: 1.1rem;
+}
+
+.headline .title-container h1 {
+  font-size: 2rem;
+}
+
+.padding-inline-sm {
+  display: "inline";
+  padding: 0 5px;
+}
+
+.margin-inline-sm {
+  display: "inline";
+  margin: 0 5px;
+}
+
+.padding-inline-normal {
+  display: "inline";
+  padding: 0 10px;
+}
+
+.margin-inline-normal {
+  display: "inline";
+  margin: 0 10px;
+}
+
+.padding-inline-md {
+  display: "inline";
+  padding: 0 15px;
+}
+
+.margin-inline-md {
+  display: "inline";
+  margin: 0 15px;
+}
+
+.padding-inline-lg {
+  display: "inline";
+  padding: 0 20px;
+}
+
+.margin-inline-lg {
+  display: "inline";
+  margin: 0 20px;
+}
+
+.padding-inline-xl {
+  display: "inline";
+  padding: 0 25px;
+}
+
+.margin-inline-xl {
+  display: "inline";
+  margin: 0 25px;
+}
+
+.padding-inline-xxl {
+  display: "inline";
+  padding: 0 30px;
+}
+
+.margin-inline-xxl {
+  display: "inline";
+  margin: 0 30px;
+}
+
+.padding-block-sm {
+  display: "block";
+  padding: 5px;
+}
+
+.margin-block-sm {
+  display: "block";
+  margin: 5px;
+}
+
+.padding-block-normal {
+  display: "block";
+  padding: 10px;
+}
+
+.margin-block-normal {
+  display: "block";
+  margin: 10px;
+}
+
+.padding-block-md {
+  display: "block";
+  padding: 15px;
+}
+
+.margin-block-md {
+  display: "block";
+  margin: 15px;
+}
+
+.padding-block-lg {
+  display: "block";
+  padding: 20px;
+}
+
+.margin-block-lg {
+  display: "block";
+  margin: 20px;
+}
+
+.padding-block-xl {
+  display: "block";
+  padding: 25px;
+}
+
+.margin-block-xl {
+  display: "block";
+  margin: 25px;
+}
+
+.padding-block-xxl {
+  display: "block";
+  padding: 30px;
+}
+
+.margin-block-xxl {
+  display: "block";
+  margin: 30px;
+}
+
+.button-blue {
+  background-color: #0e6cff;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.button-orange {
+  background-color: #ff8700;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.button-green {
+  background-color: #4caf50;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.row-col-1 {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1em;
+  justify-content: center;
+}
+.row-col-1 .grid-element {
+  width: calc(100% - 1em);
+}
+.row-col-1 .grid-element img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.row-col-2 {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1em;
+  justify-content: center;
+}
+.row-col-2 .grid-element {
+  width: calc(50% - 1em);
+}
+.row-col-2 .grid-element img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.row-col-3 {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1em;
+  justify-content: center;
+}
+.row-col-3 .grid-element {
+  width: calc(33.3333333333% - 1em);
+}
+.row-col-3 .grid-element img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.row-col-4 {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1em;
+  justify-content: center;
+}
+.row-col-4 .grid-element {
+  width: calc(25% - 1em);
+}
+.row-col-4 .grid-element img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.row-col-5 {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1em;
+  justify-content: center;
+}
+.row-col-5 .grid-element {
+  width: calc(20% - 1em);
+}
+.row-col-5 .grid-element img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.row-col-6 {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1em;
+  justify-content: center;
+}
+.row-col-6 .grid-element {
+  width: calc(16.6666666667% - 1em);
+}
+.row-col-6 .grid-element img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=style.css.map */

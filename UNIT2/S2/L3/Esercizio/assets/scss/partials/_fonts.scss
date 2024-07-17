@@ -1,4 +1,24 @@
+$fonzie-small: 0.8rem;
+$fonzie-normal: 1.2rem;
+$fonzie-large: 1.5rem;
+$fonzie-extra-large: 2rem;
+
+
 *{
     font-family:  Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
     color: #f4f4f4;
+    font-size: $fonzie-normal;
+    line-height: 1.1rem;
+}
+
+
+@mixin title-big($mySize){
+    font-size: $mySize;
+}
+.headline{
+    .title-container{
+        h1{
+            @include title-big($fonzie-extra-large);
+        }
+    }
 }

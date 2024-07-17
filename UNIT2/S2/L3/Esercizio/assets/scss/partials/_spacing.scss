@@ -1,0 +1,33 @@
+$my-sizes: (
+    sm: 5px,
+    normal: 10px,
+    md: 15px,
+    lg: 20px,
+    xl: 25px,
+    xxl: 30px
+);
+
+$my-displays: 'inline', 'block';
+
+@each $display in $my-displays{
+    @each $type, $size in $my-sizes{
+        .padding-#{$display}-#{$type}{
+            display: $display;
+            @if $display == 'inline'{
+                padding: 0 $size;
+            } @else {
+                padding: $size;
+            }
+        }
+
+        .margin-#{$display}-#{$type}{
+            display: $display;
+            @if $display == 'inline'{
+                margin: 0 $size;
+            } @else {
+                margin: $size;
+            }
+        }
+    }
+}
+

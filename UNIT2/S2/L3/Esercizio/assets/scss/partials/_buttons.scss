@@ -1,0 +1,7 @@
+@each $color-name, $color in $my-button-colors{
+    .button-#{$color-name}{
+        background-color: $color;
+        border-radius: 5px;
+        padding: 5px 10px;
+    }
+}
