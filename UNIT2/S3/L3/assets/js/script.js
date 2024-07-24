@@ -7,7 +7,7 @@ window.addEventListener('load', function (event) {
     if(!this.localStorage.getItem('shoppingCart'))
         this.localStorage.setItem('shoppingCart', undefined);
 
-    AddToShoppingCart([]);
+    AddToShoppingCart();
     
     this.fetch('https://striveschool-api.herokuapp.com/books').
     then(function(promise){
@@ -109,6 +109,9 @@ function CreateBootstrapCard(cardId, imgSource, title, textContent) {
 
 
 function AddToShoppingCart(item){
+    if(localStorage.getItem('shoppingCart') === 'undefined' && item === undefined)
+        return;
+
     let shopingCart = localStorage.getItem('shoppingCart') !== 'undefined' ? JSON.parse(localStorage.getItem('shoppingCart')) : [];
 
     shopingCart.push(item);
