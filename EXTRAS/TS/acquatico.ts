@@ -1,0 +1,3 @@
+interface acquatico {
+    swim():string;
+}
