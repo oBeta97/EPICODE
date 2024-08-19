@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import ButtonComponent from './components/ButtonComponent';
+import ButtonComponent from './assets/components/ButtonComponent';
+import ImageComponent from './assets/components/ImageComponent';
+import duck from './assets/img/duck.jpg'
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
         </a>
         
         <ButtonComponent btnText="prova" />
+        <ImageComponent imgUrl={duck} />
       </header>
     </div>
   );
