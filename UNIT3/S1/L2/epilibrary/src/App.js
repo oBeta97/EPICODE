@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import MyNav from './components/MyNav';
 import MyFooter from './components/MyFooter';
+import Welcome from './components/Welcome';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       </header>
 
       <main>
-
+        <Welcome />
       </main>
 
       <footer>
