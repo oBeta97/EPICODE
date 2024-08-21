@@ -6,7 +6,7 @@ import { Col, Row } from "react-bootstrap";
 import MyNav from './components/MyNav';
 import MyFooter from './components/MyFooter';
 import Welcome from './components/Welcome';
-import AllTheBooks from './components/AllTheBooks';
+import BookList from './components/BookList';
 import CategorySelector from './components/CategorySelector';
 import SearchBook from './components/SearchBook';
 
@@ -54,12 +54,18 @@ function App() {
                     if (inputVal === '')
                       return defaultCategorySelected;
 
-                    if(searchInputVal.length > inputVal.length)
-                      setCategorySelected(defaultCategorySelected);
-                    else
-                      setSearchInputVal(inputVal);
+                    let category = [];
 
-                    return categorySelected.filter(
+                    if(searchInputVal.length > inputVal.length){
+                      setSearchInputVal(inputVal);
+                      category = defaultCategorySelected
+                    }
+                    else{
+                      setSearchInputVal(inputVal);
+                      category = categorySelected;
+                    }
+
+                    return category.filter(
                       (item) => item.title.toLowerCase().includes(inputVal.toLowerCase())
                     );
                   }
@@ -69,8 +75,7 @@ function App() {
           </Col>
         </Row>
 
-        <AllTheBooks category={categorySelected} />
-        {/* // updateCategory={(categoryName) => setBooksType(categoryName)} */}
+        <BookList books={categorySelected} />
       </main>
 
       <footer>

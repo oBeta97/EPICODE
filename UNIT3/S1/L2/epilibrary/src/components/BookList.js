@@ -1,7 +1,6 @@
 import { Component } from "react";
-import { Col, Container, Row, Card } from "react-bootstrap";
-
-
+import { Col, Container, Row } from "react-bootstrap";
+import Book from "./Book";
 
 class BookList extends Component {
     render() {
@@ -12,18 +11,7 @@ class BookList extends Component {
                         this.props.books.map((book => {
                             return (
                                 <Col key={book.asin}>
-                                    <Card style={{ width: '18rem' }}>
-                                        <Card.Img variant="top" src={book.img} className="img-fluid" />
-                                        <Card.Body>
-                                            <Card.Title>{book.title}</Card.Title>
-                                            <Card.Text className="small">
-                                                Price: {book.price}€
-                                            </Card.Text>
-                                            <Card.Text className="small">
-                                                Category: {book.category}
-                                            </Card.Text>
-                                        </Card.Body>
-                                    </Card>
+                                    <Book data={book} />
                                 </Col>
                             );
                         }))
