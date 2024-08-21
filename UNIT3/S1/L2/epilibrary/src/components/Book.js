@@ -13,7 +13,7 @@ class Book extends Component {
             <Card
                 style={{ width: '18rem' }}
                 className={
-                    this.state.active ? "border-2 border-danger h-100 d-flex flex-column" : "h-100 d-flex flex-column"
+                    this.state.active ? "border-2 border-danger" : ""
                 }
             >
                 <Card.Img
