@@ -117,14 +117,15 @@ class BookComments extends Component {
         fetch(`https://striveschool-api.herokuapp.com/api/comments/`, {
             method: "POST",
             body: JSON.stringify({
-                elementId: this.props.bookId,
-                comment: commentText,
-                rate:5,
-                author: 'cicciopasticcio@rigatoni.pasta',
-                createdAt: new Date(),
+                "elementId": this.props.bookId,
+                "comment": commentText,
+                "rate":'5',
+                // author: 'cicciopasticcio@rigatoni.pasta',
+                // createdAt: new Date(),
             }),
             headers: {
-                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmM3Mjk3NTI4YWI5NjAwMTU2NjRmMDgiLCJpYXQiOjE3MjQzMjgzMDksImV4cCI6MTcyNTUzNzkwOX0.luBPQ1KaA-TY0VDGkkeLx8G7NIYOaJGorlrpGRasgdE"
+                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmM3Mjk3NTI4YWI5NjAwMTU2NjRmMDgiLCJpYXQiOjE3MjQzMjgzMDksImV4cCI6MTcyNTUzNzkwOX0.luBPQ1KaA-TY0VDGkkeLx8G7NIYOaJGorlrpGRasgdE",
+                "Content-type": "application/json"
             }
         })
             .then((response) => {
