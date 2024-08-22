@@ -43,8 +43,14 @@ class Book extends Component {
                         </Card.Body>
                     </>
                 ) : (
-                    <BookComments bookId = {this.props.data.asin}/>
-                    )}
+                    <BookComments
+                        bookId={this.props.data.asin}
+                        onCloseClick={() => {this.setState({
+                            active: !this.state.active,
+                            showComments: false,
+                        })}}
+                    />
+                )}
 
             </Card>
         );
