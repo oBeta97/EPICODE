@@ -6,7 +6,7 @@ class BookList extends Component {
     render() {
         return (
             <Container>
-                <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3">
+                <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 my-4">
                     {
                         this.props.books.map((book => {
                             return (
