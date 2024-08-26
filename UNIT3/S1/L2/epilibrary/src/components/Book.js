@@ -1,15 +1,20 @@
 import { Component } from "react";
-import { Card, ListGroup } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
-import BookComments from "./BookComments";
 
 class Book extends Component {
 
     state = {
         active: false,
-        showComments: false,
-    }
+    };
 
+    componentDidUpdate = (lastProps, lastState) => {
+        if (lastProps.selectedBook !== this.props.data.asin && lastProps !== this.props)
+            this.setState({
+                ...this.state,
+                active: false,
+            })
+    };
 
     render() {
         return (
@@ -19,39 +24,33 @@ class Book extends Component {
                     this.state.active ? "border-2 border-danger" : ""
                 }
             >
-                {!this.state.showComments ? (
-                    <>
-                        <Card.Img
-                            variant="top"
-                            src={this.props.data.img}
-                            className="img-fluid"
-                            style={{ maxHeight: "65%" }}
-                            onClick={() =>
-                                this.setState({
-                                    active: !this.state.active,
-                                    showComments: true,
-                                })}
-                        />
-                        <Card.Body>
-                            <Card.Title>{this.props.data.title}</Card.Title>
-                            <Card.Text className="small">
-                                Price: {this.props.data.price}€
-                            </Card.Text>
-                            <Card.Text className="small">
-                                Category: {this.props.data.category}
-                            </Card.Text>
-                        </Card.Body>
-                    </>
-                ) : (
-                    <BookComments
-                        bookId={this.props.data.asin}
-                        onCloseClick={() => {this.setState({
-                            active: !this.state.active,
-                            showComments: false,
-                        })}}
-                    />
-                )}
 
+                <Card.Img
+                    variant="top"
+                    src={this.props.data.img}
+                    className="img-fluid"
+                    style={{ maxHeight: "65%" }}
+                    onClick={() => {
+                        this.setState({
+                            active: !this.state.active,
+                        })
+
+                        this.props.onBookClick(
+                            !this.state.active ?
+                                this.props.data.asin :
+                                0
+                        )
+                    }}
+                />
+                <Card.Body>
+                    <Card.Title>{this.props.data.title}</Card.Title>
+                    <Card.Text className="small">
+                        Price: {this.props.data.price}€
+                    </Card.Text>
+                    <Card.Text className="small">
+                        Category: {this.props.data.category}
+                    </Card.Text>
+                </Card.Body>
             </Card>
         );
     }
