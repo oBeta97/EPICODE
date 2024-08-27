@@ -1,59 +1,60 @@
-import { Component } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Card } from "react-bootstrap";
 
 
-class Book extends Component {
+const Book = (props) => {
 
-    state = {
-        active: false,
-    };
+    const [active, setActive] = useState(props.selectedBook);
 
-    componentDidUpdate = (lastProps, lastState) => {
-        if (lastProps.selectedBook !== this.props.data.asin && lastProps !== this.props)
-            this.setState({
-                ...this.state,
-                active: false,
-            })
-    };
+    const isFirstRun = useRef(true);
 
-    render() {
-        return (
-            <Card
-                style={{ height: '30rem', overflowY: "auto" }}
-                className={
-                    this.state.active ? "border-2 border-danger" : ""
-                }
-            >
 
-                <Card.Img
-                    variant="top"
-                    src={this.props.data.img}
-                    className="img-fluid"
-                    style={{ maxHeight: "65%" }}
-                    onClick={() => {
-                        this.setState({
-                            active: !this.state.active,
-                        })
+    useEffect(() => {
+        
+        if(isFirstRun.current){
+            isFirstRun.current = false
+            return;
+        }
 
-                        this.props.onBookClick(
-                            !this.state.active ?
-                                this.props.data.asin :
-                                0
-                        )
-                    }}
-                />
-                <Card.Body>
-                    <Card.Title>{this.props.data.title}</Card.Title>
-                    <Card.Text className="small">
-                        Price: {this.props.data.price}€
-                    </Card.Text>
-                    <Card.Text className="small">
-                        Category: {this.props.data.category}
-                    </Card.Text>
-                </Card.Body>
-            </Card>
-        );
-    }
+        setActive(props.selectedBook)
+
+    }, [props.selectedBook]);
+       
+    return (
+        <Card
+            style={{ height: '30rem', overflowY: "auto" }}
+            className={
+                active ? "border-2 border-danger" : ""
+            }
+        >
+
+            <Card.Img
+                variant="top"
+                src={props.data.img}
+                className="img-fluid"
+                style={{ maxHeight: "65%" }}
+                onClick={() => {
+                    props.onBookClick(
+                        !active ?
+                            props.data.asin :
+                            0
+                    )
+
+                    setActive(!active);
+                }}
+            />
+            <Card.Body>
+                <Card.Title>{props.data.title}</Card.Title>
+                <Card.Text className="small">
+                    Price: {props.data.price}€
+                </Card.Text>
+                <Card.Text className="small">
+                    Category: {props.data.category}
+                </Card.Text>
+            </Card.Body>
+        </Card>
+    );
+
 }
 
 export default Book;

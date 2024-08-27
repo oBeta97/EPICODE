@@ -1,61 +1,60 @@
-import { Component } from "react";
+import { useState } from "react";
 import { Alert, Col, Container, Row } from "react-bootstrap";
 import Book from "./Book";
 import BookComments from "./BookComments";
 
-class BookList extends Component {
+const BookList = (props) => {
 
-    state = {
-        selectedBookId: 0,
+    const [selectedBookId, setSelectedBookId] = useState(0);
+
+    const UpdateBookId = (bookAsin) => {
+        console.log('aggiornato bookId: ', bookAsin)
+        setSelectedBookId(bookAsin);
     }
 
-    UpdateBookId = (bookAsin) => {
-        this.setState({
-            ...this.state,
-            selectedBookId: bookAsin,
-        })
-    }
-
-    render() {
-        return (
-            <Container>
-                <Row>
-                    <Col>
-                        <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 my-4">
-                            {
-                                this.props.books.map((book => {
-                                    return (
-                                        <Col key={book.asin}>
-                                            <Book
-                                                data={book}
-                                                onBookClick={(bookAsin) => this.UpdateBookId(bookAsin)}
-                                                selectedBook={this.state.selectedBookId}
-                                            />
-                                        </Col>
-                                    );
-                                }))
-                            }
-                        </Row>
-                    </Col>
-                    <Col className="col-3">
+    return (
+        <Container>
+            <Row>
+                <Col>
+                    <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 my-4">
                         {
-                            this.state.selectedBookId ? (
-                                <BookComments
-                                    bookId={this.state.selectedBookId}
-                                    onCloseClick={() => this.UpdateBookId(0)}
-                                />
-                            ) :
-                                (
-                                    <Alert variant="warning" className="my-5">
-                                        No book selected 🥸
-                                    </Alert>
-                                )
+                            props.books.map((book => {
+                                if(selectedBookId === book.asin){
+                                    console.log('selectedBookId', selectedBookId)
+                                    console.log('book.asin', book.asin)
+                                }
+
+                                return (
+                                    <Col key={book.asin}>
+                                        <Book
+                                            data={book}
+                                            onBookClick={(bookAsin) => UpdateBookId(bookAsin)}
+                                            selectedBook={selectedBookId === book.asin ? true : false}
+                                        />
+                                    </Col>
+                                );
+                            }))
                         }
-                    </Col>
-                </Row>
-            </Container>
-        );
-    }
+                    </Row>
+                </Col>
+                <Col className="col-3">
+                    {
+                        selectedBookId ? (
+                            <BookComments
+                                bookId={selectedBookId}
+                                onCloseClick={() => UpdateBookId(0)}
+                            />
+                        ) :
+                            (
+                                <Alert variant="warning" className="my-5">
+                                    No book selected 🥸
+                                </Alert>
+                            )
+                    }
+                </Col>
+            </Row>
+        </Container>
+    );
 }
 
 export default BookList;

@@ -1,9 +1,8 @@
-import { Component } from "react";
 import { ButtonGroup, Button } from "react-bootstrap";
 
 
-class CategorySelector extends Component {
-    categories = [
+const CategorySelector = (props) => {
+    const categories = [
         'fantasy',
         'history',
         'horror',
@@ -11,23 +10,21 @@ class CategorySelector extends Component {
         'scifi',
     ];
 
-    render() {
-        return (
-            <ButtonGroup aria-label="Books categories" className="mb-4">
-                {
-                    this.categories.map((category) =>
-                        <Button
-                            key={category}
-                            variant="secondary"
-                            onClick={() => this.props.onCategorySelect(category)}
-                        >
-                            {category}
-                        </Button>
-                    )
-                }
-            </ButtonGroup>
-        );
-    }
+    return (
+        <ButtonGroup aria-label="Books categories" className="mb-4">
+            {
+                categories.map((category) =>
+                    <Button
+                        key={category}
+                        variant="secondary"
+                        onClick={() => props.onCategorySelect(category)}
+                    >
+                        {category}
+                    </Button>
+                )
+            }
+        </ButtonGroup>
+    );
 }
 
 export default CategorySelector;
