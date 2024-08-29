@@ -22,6 +22,7 @@ const Book = (props) => {
        
     return (
         <Card
+            data-testid='book-card'
             style={{ height: '30rem', overflowY: "auto" }}
             className={
                 active ? "border-2 border-danger" : ""
