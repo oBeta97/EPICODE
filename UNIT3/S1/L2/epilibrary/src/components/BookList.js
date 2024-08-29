@@ -13,19 +13,17 @@ const BookList = (props) => {
     }
 
     return (
-        <Container>
+        <Container data-testid="booklist-container">
             <Row>
                 <Col>
                     <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 my-4">
                         {
                             props.books.map((book => {
-                                if(selectedBookId === book.asin){
-                                    console.log('selectedBookId', selectedBookId)
-                                    console.log('book.asin', book.asin)
-                                }
-
                                 return (
-                                    <Col key={book.asin}>
+                                    <Col
+                                        key={book.asin}
+                                        data-testid="booklist-col"
+                                    >
                                         <Book
                                             data={book}
                                             onBookClick={(bookAsin) => UpdateBookId(bookAsin)}

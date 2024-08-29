@@ -3,7 +3,7 @@ import { InputGroup, Form } from "react-bootstrap";
 
 const SearchBook = (props) => {
     return (
-        <InputGroup className="mb-3">
+        <InputGroup className="mb-3" data-testid="search-bar">
             <InputGroup.Text id="searchBook">
                 S
             </InputGroup.Text>

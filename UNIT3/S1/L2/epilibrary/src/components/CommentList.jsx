@@ -5,7 +5,7 @@ import AddComment from "./AddComment";
 const CommentList = (props) => {
 
     return (
-        <ListGroup>
+        <ListGroup data-testid="comment-list">
 
             {
                 props.comments.length === 0 ? (

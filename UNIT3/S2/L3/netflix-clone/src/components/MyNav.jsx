@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const MyNav = () => {
 
-    const [showModal, setShowModal] = useState(false)
+    const [showModal] = useState(false)
     const location = useLocation()
 
     const links = [

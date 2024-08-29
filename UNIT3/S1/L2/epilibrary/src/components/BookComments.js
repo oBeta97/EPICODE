@@ -41,7 +41,7 @@ const BookComments = (props) => {
     }
 
     return (
-        <Card.Body className="position-relative py-4">
+        <Card.Body className="position-relative py-4" data-testid="comment-card">
             <Card.Title>Comments:</Card.Title>
             <span
                 className="btn btn-outline-dark position-absolute"
@@ -58,7 +58,7 @@ const BookComments = (props) => {
                     <Spinner animation="grow" variant="info" />
                 ) :
                     fetchError ? (
-                        <Alert variant="danger">
+                        <Alert variant="danger" data-testid="fetch-error">
                             Something went wrong! D:
                         </Alert>
                     ) :
