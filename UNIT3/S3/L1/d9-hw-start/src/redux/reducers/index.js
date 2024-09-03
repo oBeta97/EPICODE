@@ -1,3 +1,5 @@
+import { ADD_TO_STEVE_LIST, REMOVE_FROM_STEVE_LIST } from "../actions"
+
 const initialState = {
     steveList: {
         content: [],
@@ -7,7 +9,7 @@ const initialState = {
 const mainReducer = (state = initialState, action) => {
     switch (action.type) {
 
-        case 'ADD_TO_STEVE_LIST':
+        case ADD_TO_STEVE_LIST:
             return {
                 ...state,
                 steveList: {
@@ -16,7 +18,7 @@ const mainReducer = (state = initialState, action) => {
                 },
             }
 
-        case 'REMOVE_FROM_STEVE_LIST':
+        case REMOVE_FROM_STEVE_LIST:
             return {
                 ...state,
                 steveList: {

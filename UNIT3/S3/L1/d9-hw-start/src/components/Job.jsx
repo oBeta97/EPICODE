@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import DeleteSteve from './DeleteSteve'
 
 const Job = ({ data }) => {
-  const selector = useSelector(store => store.steveList.content);
+  const selector = useSelector(store => store.steveList.list);
 
   return (
     <Row

@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const JobListCounter = (props) => {
 
     const navigator = useNavigate();
-    const selector = useSelector((store) => store.steveList.content);
+    const selector = useSelector((store) => store.steveList.list);
 
     return (
         <Button

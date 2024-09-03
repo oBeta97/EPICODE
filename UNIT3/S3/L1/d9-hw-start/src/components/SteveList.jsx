@@ -6,7 +6,7 @@ import DeleteSteve from "./DeleteSteve";
 
 const SteveList = (props) => {
 
-    const steveListRedux = useSelector((store) => store.steveList.content);
+    const steveListRedux = useSelector((store) => store.steveList.list);
 
     return (
         <Container className="my-5">

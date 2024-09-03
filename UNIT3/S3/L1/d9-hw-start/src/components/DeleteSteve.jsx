@@ -1,6 +1,7 @@
 import { Button } from "react-bootstrap";
 import { FaTrash } from "react-icons/fa";
 import { useDispatch } from "react-redux";
+import { removeFromSteveList } from "../redux/actions";
 
 const DeleteSteve = ({ indexToDelete, idToDelete }) => {
     
@@ -9,12 +10,7 @@ const DeleteSteve = ({ indexToDelete, idToDelete }) => {
     return (
         <Button
             variant="warning"
-            onClick={() => {
-                dispatch({
-                    type: "REMOVE_FROM_STEVE_LIST",
-                    payload: indexToDelete ?? idToDelete,
-                })
-            }}
+            onClick={() => dispatch(removeFromSteveList(indexToDelete ?? idToDelete))}
         >
             <FaTrash />
         </Button>
