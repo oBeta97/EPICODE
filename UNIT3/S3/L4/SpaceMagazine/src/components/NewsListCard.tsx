@@ -1,13 +1,20 @@
 import { Card, Col, Row } from "react-bootstrap";
 import { Article } from "../modules/interfaces";
+import { useNavigate } from "react-router-dom";
 
 interface props {
     article: Article
 }
 
 const NewsListCard = (props: props) => {
+
+    const navigate = useNavigate();
+
     return (
-        <Card>
+        <Card
+            onClick={() => navigate(`/news/${props.article.id}`)}
+            className="cursor-pointer"
+        >
             <Row>
                 <Col xs={2}>
                     <Card.Img variant="top" className="img-fluid" src={props.article.image_url} />

@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import MyMain from './components/MyMain';
 import MyHeader from './components/MyHeader';
+import NewsDetail from './components/NewsDetail';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={<MyMain />} />
-          <Route path='/news/:newsId' element />
+          <Route path='/news/:newsId' element={<NewsDetail />} />
         </Routes>
       </main>
 

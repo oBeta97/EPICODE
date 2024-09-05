@@ -23,7 +23,7 @@ const NewsCard = (props: props) => {
                 variant="top"
                 src={props.article.image_url}
                 style={{
-                    maxHeight: '10em'
+                    height: '10em'
                 }}
             />
             <Card.Body>
