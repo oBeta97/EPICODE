@@ -18,6 +18,7 @@ const NewsDetail = () => {
                 setNews(news)
                 setIsLoading(false);
             })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (
