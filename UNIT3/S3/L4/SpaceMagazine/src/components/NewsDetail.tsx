@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getSingleNews } from "../modules/fetches";
-import { SingleArticle } from "../modules/interfaces";
+import { Article } from "../modules/interfaces";
 import { Card, Container, Spinner } from "react-bootstrap";
 
 const NewsDetail = () => {
 
     const params = useParams();
-    const [news, setNews] = useState<SingleArticle>();
+    const [news, setNews] = useState<Article>();
     const [isLoading, setIsLoading] = useState<boolean>(true)
 
     console.log(params);

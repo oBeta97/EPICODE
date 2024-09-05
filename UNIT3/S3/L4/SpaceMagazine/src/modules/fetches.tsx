@@ -1,4 +1,4 @@
-import { ApiResponse, SingleArticle } from "./interfaces";
+import { ApiResponse, Article } from "./interfaces";
 
 export const getNews = (URL:string): Promise<ApiResponse> => {
     return (
@@ -21,7 +21,7 @@ export const getNews = (URL:string): Promise<ApiResponse> => {
 }
 
 
-export const getSingleNews = (URL:string): Promise<SingleArticle> => {
+export const getSingleNews = (URL:string): Promise<Article> => {
     return (
         fetch(URL)
         .then((response) => {
