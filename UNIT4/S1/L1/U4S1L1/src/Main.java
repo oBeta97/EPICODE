@@ -77,6 +77,7 @@ public class Main {
 
         System.out.println(ex3.isEven(num) ? "Il numero inserito è pari" : "Il numero inserito è dispari");
 
+        //per salvare le credenziali
 
     }
 }
