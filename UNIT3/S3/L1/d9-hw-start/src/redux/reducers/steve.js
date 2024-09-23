@@ -4,7 +4,7 @@ const initialState = {
     list: []
 };
 
-const steve = (state = initialState, action) => {
+export const steve = (state = initialState, action) => {
 
     switch (action.type) {
 
