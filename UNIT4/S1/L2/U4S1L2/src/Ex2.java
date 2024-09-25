@@ -25,7 +25,7 @@ public class Ex2 {
     }
 
     public int[] countToZero (int number) {
-        int[] array = new int[number];
+        ijnt[] array = new int[number];
 
         for (int i = number, index = 0; i > 0; i--, index++) {
             array[index] = i;
