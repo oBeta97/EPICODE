@@ -22,7 +22,7 @@ public class Main {
 
         System.out.println(" ");
 
-        Carrello carrello = new Carrello(customer,new ArrayList<Articolo>());
+        Carrello carrello = new Carrello(customer, new ArrayList<Articolo>());
 
         while (true) {
             System.out.println("creare un articolo? (y/n)");
@@ -42,7 +42,7 @@ public class Main {
 
             System.out.println("articolo creato: \n " + a.toString());
 
-            while (true){
+            while (true) {
                 System.out.println("inserire l'articolo nel carrello? (y/n)");
                 risposta = scanner.nextLine();
                 if (!risposta.equals("y") && !risposta.equals("n")) continue;
